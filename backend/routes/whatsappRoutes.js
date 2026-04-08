@@ -1,3 +1,4 @@
+
 const express = require('express');
 const router = express.Router();
 
@@ -16,3 +17,13 @@ router.post('/send', (req, res) => {
 });
 
 module.exports = router;
+
+
+const express = require('express');
+const router = express.Router();
+const { sendWhatsAppMessage } = require('../controllers/whatsappController');
+
+router.post('/send', sendWhatsAppMessage);
+
+module.exports = router;
+
