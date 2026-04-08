@@ -2,6 +2,9 @@
 -- MySQL / MariaDB compatible
 -- Tables and views shown in your screenshot
 
+-- Add image_url column to support product images
+ALTER TABLE `products` ADD COLUMN `image_url` VARCHAR(500) DEFAULT NULL AFTER `stock_quantity`;
+
 CREATE DATABASE IF NOT EXISTS `ecommerce` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `ecommerce`;
 
